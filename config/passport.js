@@ -47,7 +47,7 @@ module.exports = function (passport) {
 
             // input validation
             var error = false
-            const list = ['!', '#', '$'];
+            const list = ['!', '#', '$', '%', '&', '*', '(', ')', ']', '[', '>', '<', '=', '÷', '×', '+', ':', ';'];
            
                 for(let y=0; y<list.length; y++) {
                     if(username.includes(list[y])) {
@@ -64,7 +64,6 @@ module.exports = function (passport) {
                 if(username.length == 0) {
                     console.log("ahmer 222222222 ==================")
                     return done(null, false, req.flash('signInError', 'Please fill all fields'));
-
                 }
 
             // check to see if the user exists or not
