@@ -45,13 +45,17 @@ module.exports = function (passport) {
             // input validation
             // if(username.length == 0)
             //     return done(null, false, req.flash('signInError', 'Please fill all fields'));
-            console.log("ahmer123 =======================================")
             // check to see if the user exists or not
             var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
             RunQuery(sqlStr, function (rows) {
+            console.log("ahmer123 =======================================", username.length)
+
                 // if no user is found, return the message
-                if(username.length == 0)
+                if(username.length == 0) {
+                    console.log("ahmer 222222222 ==================")
                     return done(null, false, req.flash('signInError', 'Please fill all fields'));
+
+                }
                 if (rows.length < 1)
                     return done(null, false, req.flash('signInError', 'No user found dummy1.')); // req.flash is the way to set flashdata using connect-flash
 
