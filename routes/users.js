@@ -78,7 +78,7 @@ module.exports = function (app, passport) {
 
         } else {
 
-            passport.authenticate('sign-in', {
+            return passport.authenticate('sign-in', {
                 successRedirect: '/usr/', // redirect to the secure profile section
                 failureRedirect: '/sign-in', // redirect back to the signup page if there is an error
                 failureFlash: true // allow flash messages
