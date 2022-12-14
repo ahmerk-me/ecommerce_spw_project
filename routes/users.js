@@ -67,6 +67,7 @@ module.exports = function (app, passport) {
 
         if(username.length == 0) {
             console.log("ahmer 33333333 ==================")
+            var checkOutNoti = 'Please fill all fields';
             var contextDict = {
                 title: 'Sign In',
                 signInError: req.flash('signInError'),
