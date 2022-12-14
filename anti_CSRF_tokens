@@ -1,0 +1,48 @@
+    <?php
+     
+    $unique_token = md5(unique_id(rand(), TRUE));
+    $_SESSION['token'] = $unique_token;
+    $_SESSION['token_time'] = time();
+     
+    ?>
+    <form action="transfer.php" method="post">
+    <input type="hidden" name="token" value="<?php echo $unique_token; ?>" />
+    <p>
+    Amount: <input type="text" name="amount" /><br />
+    Send To: <input type="text" name="account" /><br />
+    <input type="submit" value="Transfer" />
+    </p>
+    </form>
+
+
+    
+    <?php
+     
+    if (!isset($_SESSION['token']))
+    {
+        $_SESSION['token'] = md5(unique_id(rand(), TRUE));
+        
+    }
+     
+    ?>
+
+    <?php
+     
+     if ($_POST['token'] == $_SESSION['token'])
+     {
+         /* Valid Token */
+     }
+      
+    ?>
+ 
+    <?php
+     
+     $token_age = time() - $_SESSION['token_time'];
+      
+     if ($token_age <= 300)
+     {
+         /* Less than five minutes have passed. */
+     }
+      
+     ?>
+ 
