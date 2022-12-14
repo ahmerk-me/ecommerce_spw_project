@@ -3,7 +3,7 @@ var mysql = require('mysql');
 var config = {
     host: 'eu-cdbr-west-03.cleardb.net',
     user: 'b34c0eac082c96',
-    password: 'q',
+    password: '0228b973',
     database: 'heroku_d7ff10c819a6b45'
 };
 
