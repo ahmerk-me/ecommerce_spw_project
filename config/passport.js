@@ -43,9 +43,6 @@ module.exports = function (passport) {
         },
         function (req, username, password, done) { // callback with username and password from form
         
-            // check to see if the user exists or not
-            var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
-            RunQuery(sqlStr, function (rows) {
             console.log("ahmer123 =======================================", username.length)
 
             // input validation
@@ -53,7 +50,7 @@ module.exports = function (passport) {
             const list = ['!', '#', '$'];
            
                 for(let y=0; y<list.length; y++) {
-                    if(username.includes(y)) {
+                    if(username.includes(list.charAt(y))) {
                         error = true
                         console.log("12345 == found special character ===========")
                     }
@@ -69,6 +66,11 @@ module.exports = function (passport) {
                     return done(null, false, req.flash('signInError', 'Please fill all fields'));
 
                 }
+
+            // check to see if the user exists or not
+            var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
+            RunQuery(sqlStr, function (rows) {
+            
                 if (rows.length < 1)
                     return done(null, false, req.flash('signInError', 'No user found dummy1.')); // req.flash is the way to set flashdata using connect-flash
 
