@@ -225,8 +225,8 @@ router.route('/products/add')
                 + req.body.unit + ', \
             \'' + req.body.description + '\', '
                 + req.body.year + ', \
-            \'' + slug(req.body.name) + '.png\', \
-            \'' + slug(req.body.name) + '\', '
+            \'' + slug(req.body.image.title) + '.jpg\', \
+            \'' + slug(req.body.image.name) + '\', '
                 + req.body.feature + ')'
         /*Image = name.png\*/
             ;
