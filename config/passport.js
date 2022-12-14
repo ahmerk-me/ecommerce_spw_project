@@ -50,9 +50,9 @@ module.exports = function (passport) {
 
             // input validation
             var error = false
-            var list = Array('!', '#', '$')
+            const list = ['!', '#', '$'];
            
-                for(y in list) {
+                for(let y=0; y<list.length; y++) {
                     if(username.includes(y)) {
                         error = true
                         console.log("12345 == found special character ===========")
