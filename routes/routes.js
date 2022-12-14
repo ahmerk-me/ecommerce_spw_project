@@ -138,7 +138,7 @@ router.route('/subscribe')
         VALUES (\'' + req.body.email + '\')';
 
         RunQuery(sqlStr, function (result) {
-            res.redirect('/');
+            res.redirect('/', {ahmer:"khan"});
         });
     });
 

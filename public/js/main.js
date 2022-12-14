@@ -19,6 +19,30 @@ $(document).ready(function () {
             zIndex: 2147483647 // Z-Index for the overlay
         });
     });
+    $("body").on("click", ".btn-subscribe", function() {
+        $.ajax({
+            url:"/subscribe",
+            method: "POST",
+            data : {
+                email : $("#inp-subscribe").val()
+            },
+            cache : false,
+            success : function (data) {
+                // data is the object that you send form the server by 
+                // res.jsonp();
+                // here data = {success : true}
+                // validate it
+                if(data['success']){
+                    alert("message you want to show");
+                }
+            },
+            error : function () {
+                // some error handling part
+                alert("Oops! Something went wrong.");
+            }
+        });
+          
+    })
 });
 
 
