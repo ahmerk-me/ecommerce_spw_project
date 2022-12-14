@@ -38,27 +38,27 @@ $(document).ready(function () {
           
     })
 
-    $("body").on("click", ".btn-contact", function() {
-        $.ajax({
-            url:"/contact-us",
-            method: "POST",
-            data : {
-                fullName : $("#inp-fullName").val(),
-                email : $("#inp-email").val(),
-                subject : $("#inp-fullName").val(),
-                contactMessage : $("#inp-message").val()
-            },
-            cache : false,
-            success : function (data) {          
-                    alert("Thank you for your message. We will get back to you as soon as possible.");
-            },
-            error : function () {
-                // some error handling part
-                alert("Oops! Something went wrong. Please try again later");
-            }
-        });
+    // $("body").on("click", ".btn-contact", function() {
+    //     $.ajax({
+    //         url:"/contact-us",
+    //         method: "POST",
+    //         data : {
+    //             fullName : $("#inp-fullName").val(),
+    //             email : $("#inp-email").val(),
+    //             subject : $("#inp-fullName").val(),
+    //             contactMessage : $("#inp-message").val()
+    //         },
+    //         cache : false,
+    //         success : function (data) {          
+    //                 alert("Thank you for your message. We will get back to you as soon as possible.");
+    //         },
+    //         error : function () {
+    //             // some error handling part
+    //             alert("Oops! Something went wrong. Please try again later");
+    //         }
+    //     });
           
-    })
+    // })
 });
 
 
