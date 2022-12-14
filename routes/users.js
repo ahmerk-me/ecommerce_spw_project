@@ -60,11 +60,32 @@ module.exports = function (app, passport) {
         res.render('sign-in', contextDict);
     });
 
-    app.post('/sign-in', passport.authenticate('sign-in', {
-        successRedirect: '/usr/', // redirect to the secure profile section
-        failureRedirect: '/sign-in', // redirect back to the signup page if there is an error
-        failureFlash: true // allow flash messages
-    }));
+    app.post('/sign-in', function(req, res) {
+
+        var username = req.body.username
+        console.log("ahmer 444444444444 =======================================", username.length)
+
+        if(username.length == 0) {
+            console.log("ahmer 33333333 ==================")
+            var contextDict = {
+                title: 'Sign In',
+                signInError: req.flash('signInError'),
+                checkOutNoti: checkOutNoti
+            };
+    
+            res.render('sign-in', contextDict);
+
+        } else {
+
+            passport.authenticate('sign-in', {
+                successRedirect: '/usr/', // redirect to the secure profile section
+                failureRedirect: '/sign-in', // redirect back to the signup page if there is an error
+                failureFlash: true // allow flash messages
+            })
+        }
+
+    }
+    );
 
     app.get('/sign-up', function (req, res) {
         // render the page and pass in any flash data if it exists
