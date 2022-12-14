@@ -2,9 +2,9 @@
 var mysql = require('mysql');
 var config = {
     host: 'eu-cdbr-west-03.cleardb.net',
-    user: 'bb1700adcaf1cd',
-    password: '4f695da8',
-    database: 'heroku_ac94777d7ec165e'
+    user: 'b34c0eac082c96',
+    password: 'q',
+    database: 'heroku_d7ff10c819a6b45'
 };
 
 // init database
