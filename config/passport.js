@@ -42,6 +42,12 @@ module.exports = function (passport) {
             passReqToCallback: true // allows to pass back the entire request to the callback
         },
         function (req, username, password, done) { // callback with username and password from form
+        
+            // check to see if the user exists or not
+            var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
+            RunQuery(sqlStr, function (rows) {
+            console.log("ahmer123 =======================================", username.length)
+
             // input validation
             var error = false
             var list = Array('!', '#', '$')
@@ -49,18 +55,14 @@ module.exports = function (passport) {
                 for(y in list) {
                     if(username.includes(y)) {
                         error = true
+                        console.log("12345 == found special character ===========")
                     }
                 }
 
                 if (error) {
                     return done(null, false, req.flash('signInError', 'Special characters are not allowed'));
                 }
-        
-            // check to see if the user exists or not
-            var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
-            RunQuery(sqlStr, function (rows) {
-            console.log("ahmer123 =======================================", username.length)
-
+                
                 // if no user is found, return the message
                 if(username.length == 0) {
                     console.log("ahmer 222222222 ==================")
