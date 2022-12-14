@@ -61,9 +61,15 @@ module.exports = function (passport) {
                 }
                 
                 // if no user is found, return the message
-                if(username.length > 8) {
+                if(username.length > 20) {
                     console.log("ahmer 222222222 ==================")
-                    return done(null, false, req.flash('signInError', 'Input is too long'));
+                    return done(null, false, req.flash('signInError', 'Username cannot be more than 20 characters'));
+                }
+
+                // if no user is found, return the message
+                if(password.length > 20) {
+                    console.log("ahmer 222222222 ==================")
+                    return done(null, false, req.flash('signInError', 'Password cannot be more than 20 characters'));
                 }
 
             // check to see if the user exists or not
