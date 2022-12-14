@@ -32,9 +32,8 @@ $(document).ready(function () {
                 // res.jsonp();
                 // here data = {success : true}
                 // validate it
-                if(data['success']){
                     alert("message you want to show");
-                }
+        
             },
             error : function () {
                 // some error handling part
