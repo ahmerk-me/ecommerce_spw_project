@@ -31,8 +31,8 @@ block content
                                 p=signInError
 
                         form(id='sign-in', action='/sign-in', method='POST')
-                            input(type='text', name='username', placeholder='Username')
-                            input(type='password', name='password', placeholder='Password')
+                            input(type='text', name='username', placeholder='Username', required =true)
+                            input(type='password', name='password', placeholder='Password', required=true)
                             //
                               <span>
                               <input type="checkbox" class="checkbox">
