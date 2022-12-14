@@ -16,7 +16,7 @@ router.route('/')
         res.render('contact', contextDict);
     })
 
-    .post(function(req, res, next){
+    .put(function(req, res, next){
         var name = req.body.fullName.replace(/[^\w\s]/gi, '');
         var email = req.body.email;
         var subject = req.body.subject.replace(/[^\w\s]/gi, '');
