@@ -14,7 +14,7 @@ block content
                     .contact-form
                         h2.title.text-center Get In Touch
                         .status.alert.alert-success(style='display: none')
-                        form#main-contact-form.contact-form.row(action='/contact-us', method='PUT')
+                        form#main-contact-form.contact-form.row(action='/contact-us', method='POST')
                             if customer
                                 .form-group.col-md-6
                                     input.form-control(type='text', name='fullName', value=customer.FullName, required='required', placeholder='Name', disabled)

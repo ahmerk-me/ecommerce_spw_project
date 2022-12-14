@@ -16,7 +16,7 @@ router.route('/')
         res.render('contact', contextDict);
     })
 
-    .put(function(req, res, next){
+    .post(function(req, res, next){
         var name = req.body.fullName.replace(/[^\w\s]/gi, '');
         var email = req.body.email;
         var subject = req.body.subject.replace(/[^\w\s]/gi, '');
@@ -35,9 +35,9 @@ router.route('/')
             message + '\')';
 
         RunQuery(insertQuery, function(result){
-            var content = 'Message have been submitted. \
+            var content = 'Your message has been submitted. \
                 We will contact you as soon as possible. \
-                Thank you so much for your attention!';
+                Thank you for contacting us!';
             var contextDict = {
                 title: 'Contact us',
                 content: content,
