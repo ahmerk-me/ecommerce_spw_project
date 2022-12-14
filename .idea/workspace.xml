@@ -5,7 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aStore.sql" afterPath="$PROJECT_DIR$/aStore.sql" />
     </list>
-    <ignored path="webProject.iws" />
+    <ignored path="ecommerce_spw_project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -35,7 +35,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="webProject" />
+    <favorites_list name="ecommerce_spw_project" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
@@ -187,27 +187,27 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -217,11 +217,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webProject" />
+              <option name="myItemId" value="ecommerce_spw_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -262,17 +262,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Downloads\web-programming\webProject\views\profile" />
-      <recent name="F:\Downloads\web-programming\webProject\views\admin" />
-      <recent name="F:\Downloads\web-programming\webProject\views\checkout" />
-      <recent name="F:\Downloads\web-programming\webProject\public\img\ico" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\profile" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\admin" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\checkout" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\public\img\ico" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Downloads\web-programming\webProject\views\profile" />
-      <recent name="F:\Downloads\web-programming\webProject\views\admin" />
-      <recent name="F:\Downloads\web-programming\webProject\views\checkout" />
-      <recent name="F:\Downloads\web-programming\webProject\views" />
-      <recent name="F:\Downloads\web-programming\webProject\public\img" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\profile" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\admin" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views\checkout" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\views" />
+      <recent name="F:\Downloads\web-programming\ecommerce_spw_project\public\img" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -702,7 +702,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="webProject" />
+      <module name="ecommerce_spw_project" />
       <envs />
       <method />
     </configuration>

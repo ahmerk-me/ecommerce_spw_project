@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('webProject:server');
+var debug = require('debug')('ecommerce_spw_project:server');
 var http = require('http');
 
 /**

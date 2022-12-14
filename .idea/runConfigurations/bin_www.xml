@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="bin\www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="E:/nodejs/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
     <envs>
-      <env name="DEBUG" value="webProject:*" />
+      <env name="DEBUG" value="ecommerce_spw_project:*" />
     </envs>
     <browser url="http://localhost:3000/" />
     <method />
