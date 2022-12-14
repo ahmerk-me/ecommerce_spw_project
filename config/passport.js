@@ -43,8 +43,19 @@ module.exports = function (passport) {
         },
         function (req, username, password, done) { // callback with username and password from form
             // input validation
-            // if(username.length == 0)
-            //     return done(null, false, req.flash('signInError', 'Please fill all fields'));
+            var error = false
+            var list = Array('!', '#', '$')
+           
+                for(y in list) {
+                    if(username.includes(y)) {
+                        error = true
+                    }
+                }
+
+                if (error) {
+                    return done(null, false, req.flash('signInError', 'Special characters are not allowed'));
+                }
+        
             // check to see if the user exists or not
             var sqlStr = 'SELECT * FROM users WHERE Username = \'' + username + '\'';
             RunQuery(sqlStr, function (rows) {

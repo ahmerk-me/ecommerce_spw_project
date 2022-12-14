@@ -69,18 +69,18 @@ function initMap() {
     });
 
     var marker = new google.maps.Marker({
-        position: {lat: 60.2215, lng: 24.8078},
+        position: {lat: 53.349018842521396, lng: -6.2426923949376105}, 
         map: map,
-        title: 'aStore Inc.'
+        title: 'NCI Store'
     });
     marker.setMap(map);
 
-    var contentString = '<b>aStore Inc.</b>' +
-        '<p>aStore is a leading online retailer committed<br>' +
-        'to becoming the most loved and trusted marketplace<br>' +
-        'on the web.</p>' +
-        '<p>Address: Vanha maantie 6 - 02650 Espoo - Finland<br>' +
-        'Tel: Mr. Anh Pham 012-3456789</p>';
+    var contentString = '<b>NCI Store</b>' +
+        '<p>Get your official NCI merch<br>' +
+        'Get your official NCI merch<br>' +
+        'Proud NCI-ian!!!</p>' +
+        '<p>Address: Mayor Street Lower, IFSC, Dublin 1<br>' +
+        'Tel: Group-8 012-3456789</p>';
     var infoWindows = new google.maps.InfoWindow({
         content: contentString
     });
