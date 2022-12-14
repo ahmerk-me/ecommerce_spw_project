@@ -61,9 +61,9 @@ module.exports = function (passport) {
                 }
                 
                 // if no user is found, return the message
-                if(username.length == 0) {
+                if(username.length > 8) {
                     console.log("ahmer 222222222 ==================")
-                    return done(null, false, req.flash('signInError', 'Please fill all fields'));
+                    return done(null, false, req.flash('signInError', 'Input is too long'));
                 }
 
             // check to see if the user exists or not
