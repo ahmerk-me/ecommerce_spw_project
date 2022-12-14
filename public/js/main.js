@@ -27,17 +27,34 @@ $(document).ready(function () {
                 email : $("#inp-subscribe").val()
             },
             cache : false,
-            success : function (data) {
-                // data is the object that you send form the server by 
-                // res.jsonp();
-                // here data = {success : true}
-                // validate it
-                    alert("message you want to show");
-        
+            success : function (data) {          
+                    alert("Thank you for subscribing");
             },
             error : function () {
                 // some error handling part
-                alert("Oops! Something went wrong.");
+                alert("Oops! Something went wrong. Please try again later");
+            }
+        });
+          
+    })
+
+    $("body").on("click", ".btn-contact", function() {
+        $.ajax({
+            url:"/contact-us",
+            method: "POST",
+            data : {
+                fullName : $("#inp-fullName").val(),
+                email : $("#inp-email").val(),
+                subject : $("#inp-fullName").val(),
+                contactMessage : $("#inp-message").val()
+            },
+            cache : false,
+            success : function (data) {          
+                    alert("Thank you for your message. We will get back to you as soon as possible.");
+            },
+            error : function () {
+                // some error handling part
+                alert("Oops! Something went wrong. Please try again later");
             }
         });
           
