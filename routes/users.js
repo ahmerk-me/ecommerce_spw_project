@@ -88,7 +88,7 @@ module.exports = function (app, passport) {
                 //     return;
                 // }
                 // createSendToken(req.user, res);
-                return res.render("/usr/", user);
+                return res.redirect("/usr/" + req.body.username);
               })(req, res, next);
 
               
