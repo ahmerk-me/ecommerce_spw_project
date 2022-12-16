@@ -43,7 +43,7 @@ module.exports = function (passport) {
         },
         function (req, username, password, done) { // callback with username and password from form
         
-            console.log("ahmer123 =======================================", username.length)
+            console.log("12345 =======================================", username.length)
 
             // input validation
             var error = false
@@ -62,13 +62,13 @@ module.exports = function (passport) {
                 
                 // if no user is found, return the message
                 if(username.length > 20) {
-                    console.log("ahmer 222222222 ==================")
+                    console.log("222222222 ==================")
                     return done(null, false, req.flash('signInError', 'Username cannot be more than 20 characters'));
                 }
 
                 // if no user is found, return the message
                 if(password.length > 20) {
-                    console.log("ahmer 222222222 ==================")
+                    console.log("222222222 ==================")
                     return done(null, false, req.flash('signInError', 'Password cannot be more than 20 characters'));
                 }
 
@@ -77,12 +77,12 @@ module.exports = function (passport) {
             RunQuery(sqlStr, function (rows) {
             
                 if (rows.length < 1)
-                    return done(null, false, req.flash('signInError', 'No user found dummy1.')); // req.flash is the way to set flashdata using connect-flash
+                    return done(null, false, req.flash('signInError', 'No user found.'));
 
                 // if the user is found but the password is wrong
                 if (!bcrypt.compareSync(password, rows[0].Password))
-                    return done(null, false, req.flash('signInError', 'Oops! Wrong password.')); // create the loginMessage and save it to session as flashdata
-
+                    return done(null, false, req.flash('signInError', 'Oops! Wrong password.'));
+                    
                 // all is well, return successful user
                 return done(null, rows[0]);
             });
