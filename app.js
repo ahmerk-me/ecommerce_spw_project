@@ -33,8 +33,9 @@ app.use(bodyParser.json()); // JSON convertor
 app.use(bodyParser.urlencoded({extended: false}));
     // read cookies
 app.use(cookieParser());
-    // setup static directory
-app.use(express.static(path.join(__dirname, 'public'))); //defining where your static resources will be like images, css, etc
+    // setup static directory =========================================
+    //defining where your static resources will be like images, css, etc
+app.use(express.static(path.join(__dirname, 'public'))); 
     // setup session secret
 app.use(session({ secret: 'group8project', saveUninitialized: true, resave: true })); 
     // pass passport for configuration

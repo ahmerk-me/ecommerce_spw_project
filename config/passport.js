@@ -77,11 +77,11 @@ module.exports = function (passport) {
             RunQuery(sqlStr, function (rows) {
             
                 if (rows.length < 1)
-                    return done(null, false, req.flash('signInError', 'No user found.'));
+                    return done(null, false, req.flash('signInError', 'Incorrect Credentials'));
 
                 // if the user is found but the password is wrong
                 if (!bcrypt.compareSync(password, rows[0].Password))
-                    return done(null, false, req.flash('signInError', 'Oops! Wrong password.'));
+                    return done(null, false, req.flash('signInError', 'Incorrect Credentials'));
                     
                 // all is well, return successful user
                 return done(null, rows[0]);
